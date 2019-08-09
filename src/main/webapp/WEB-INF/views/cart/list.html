@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Cart</title>
+</head>
+<body>
+<h3>Your cart:</h3>
+<table border="1">
+    <tr>
+        <td>Name:</td>
+        <td>Description:</td>
+    </tr>
+    <th:block th:each="product:${myCart.getProductCart()}">
+        <tr>
+            <td th:text="${product.name}"></td>
+            <td th:text="${product.description}"></td>
+        </tr>
+
+    </th:block>
+
+</table>
+</body>
+</html>
